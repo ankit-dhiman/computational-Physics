@@ -1,0 +1,94 @@
+
+
+#include<bits/stdc++.h>
+
+
+
+
+using namespace std;
+#define SIZE 100
+
+
+void PrintSubmatrix( int matrix[SIZE][SIZE],int n) {
+  int p = n -1 ;
+ cout << "\n Submatrix = \n  ";
+   for (int i = 0; i < p; i++) {
+   for (int j = 0; j < p; j++) {
+    cout  <<setw(10) << matrix[i][j] ;
+   }
+   cout << "   \n" ;
+ }
+
+
+}
+
+
+
+
+int determinant( int matrix[SIZE][SIZE], int n) {
+
+   int det = 0;
+   int submatrix[SIZE][SIZE];
+
+   if (n == 2) {
+      return ((matrix[0][0] * matrix[1][1]) - (matrix[1][0] * matrix[0][1])); }
+   else {
+      for (int col = 0; col < n; col++) {
+            int subi = 0;
+            for (int i = 1; i < n; i++) {
+               int subj = 0;
+               for (int j = 0; j < n; j++) {
+                  if (j == col)
+                  continue;
+                  submatrix[subi][subj] = matrix[i][j];
+                  subj++;
+               }
+               subi++;
+            }
+             PrintSubmatrix(submatrix,n);
+            det = det + (pow(-1, col) * matrix[0][col] * determinant( submatrix, n - 1 ));
+            
+      }
+   }
+
+   cout<<"\n\nDet ( A ) :  \t"<< det << endl << endl;
+
+}
+
+
+
+
+//***************************************************************************
+//              start of main program
+//***************************************************************************
+
+
+
+int main() {
+    srand(time(NULL));
+   int n = 3 , i, j;
+   int A[SIZE][SIZE];
+
+
+   cout << "\n\t***************** Determiant of the matrix*****************:\n";
+     for (i = 0; i < n; i++) {
+     for (j = 0; j < n; j++) {
+      A[i][j] = rand()%5 ;
+     }
+   }
+
+//***************************************************************************
+
+   cout << "\nA = \t ";
+   for (i = 0; i < n; i++) {
+   for (j = 0; j < n; j++) {
+    cout << "\t" << A[i][j] << "  ";
+   }
+   cout << "   \n\t" ;
+ }
+
+//***************************************************************************
+  determinant(A,n) ;
+
+   return 0;
+}

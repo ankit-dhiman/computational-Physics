@@ -1,0 +1,767 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Projectile Motion with Air Resistance</TITLE>
+<META NAME="description" CONTENT="Projectile Motion with Air Resistance">
+<META NAME="keywords" CONTENT="Newtonhtml">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="Newtonhtml.css">
+
+<LINK REL="next" HREF="node30.html">
+<LINK REL="previous" HREF="node28.html">
+<LINK REL="up" HREF="node26.html">
+<LINK REL="next" HREF="node30.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html615"
+  HREF="node30.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html613"
+  HREF="node26.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html607"
+  HREF="node28.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html616"
+  HREF="node30.html">Charged Particle Motion in</A>
+<B> Up:</B> <A NAME="tex2html614"
+  HREF="node26.html">Multi-Dimensional Motion</A>
+<B> Previous:</B> <A NAME="tex2html608"
+  HREF="node28.html">Motion in a Two-Dimensional</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00430000000000000000">
+Projectile Motion with Air Resistance</A>
+</H1>
+Suppose that a
+projectile of mass <IMG
+ WIDTH="22" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img4.png"
+ ALT="$m$"> is launched, at <IMG
+ WIDTH="47" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img72.png"
+ ALT="$t=0$">, from ground level (in a flat plain), making an angle <IMG
+ WIDTH="15" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img66.png"
+ ALT="$\theta $"> to the horizontal. Suppose, further, that, in addition
+to the force of gravity, the projectile is subject to an air resistance
+force which acts in the opposite direction to  its instantaneous
+direction of motion, and whose magnitude is <EM>directly proportional</EM> to its  instantaneous speed. This is not a particularly accurate model
+of the drag force due to air resistance (the magnitude of the drag force is typically proportion
+to the square of the speed--see Section&nbsp;<A HREF="node17.html#svelyd">3.3</A>), but it does lead to
+tractable equations of motion. Hence, by using this model we can, at least,
+get some idea of how air resistance modifies projectile trajectories.
+
+<P>
+Let us adopt a Cartesian coordinate system whose origin coincides with the launch point, and whose <IMG
+ WIDTH="14" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img548.png"
+ ALT="$z$">-axis
+points vertically upward. Let the initial velocity of the projectile
+lie in the <IMG
+ WIDTH="15" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img204.png"
+ ALT="$x$">-<IMG
+ WIDTH="14" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img548.png"
+ ALT="$z$"> plane. Note that, since neither gravity nor the drag force 
+cause the projectile to  move out of the <IMG
+ WIDTH="15" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img204.png"
+ ALT="$x$">-<IMG
+ WIDTH="14" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img548.png"
+ ALT="$z$"> plane,
+we can effectively ignore the <IMG
+ WIDTH="16" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img543.png"
+ ALT="$y$"> coordinate in this problem.
+
+<P>
+The equation of motion of our projectile is written
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+m\,\frac{d{\bf v}}{dt} = m\,{\bf g} - c\,{\bf v},
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="151" HEIGHT="46" BORDER="0"
+ SRC="img574.png"
+ ALT="\begin{displaymath}
+m\,\frac{d{\bf v}}{dt} = m\,{\bf g} - c\,{\bf v},
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(175)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where <!-- MATH
+ ${\bf v} = (v_x, v_z)$
+ -->
+<IMG
+ WIDTH="97" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img575.png"
+ ALT="${\bf v} = (v_x, v_z)$"> is the projectile velocity,
+<!-- MATH
+ ${\bf g} = (0, -g)$
+ -->
+<IMG
+ WIDTH="98" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img576.png"
+ ALT="${\bf g} = (0, -g)$"> the acceleration due to gravity, and
+<IMG
+ WIDTH="14" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img185.png"
+ ALT="$c$"> a positive constant. In component form, the
+above equation becomes
+<BR>
+<DIV ALIGN="CENTER"><A NAME="e5.23u"></A><A NAME="e5.24u"></A>
+<!-- MATH
+ \begin{eqnarray}
+\frac{dv_x}{dt} &=& - g\,\frac{v_x}{v_t},\\[0.5ex]
+\frac{d v_z}{dt} &=& - g\left(1+\frac{v_z}{v_t}\right).
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="38" HEIGHT="61" ALIGN="MIDDLE" BORDER="0"
+ SRC="img577.png"
+ ALT="$\displaystyle \frac{dv_x}{dt}$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="19" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img75.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="60" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img578.png"
+ ALT="$\displaystyle - g\,\frac{v_x}{v_t},$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(176)</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="37" HEIGHT="61" ALIGN="MIDDLE" BORDER="0"
+ SRC="img579.png"
+ ALT="$\displaystyle \frac{d v_z}{dt}$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="19" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img75.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="118" HEIGHT="58" ALIGN="MIDDLE" BORDER="0"
+ SRC="img580.png"
+ ALT="$\displaystyle - g\left(1+\frac{v_z}{v_t}\right).$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(177)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+Here, <IMG
+ WIDTH="96" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img581.png"
+ ALT="$v_t = m\,g/c$"> is the <EM>terminal velocity</EM>: <EM>i.e.</EM>, the
+velocity at which the drag force balances the gravitational force (for a
+projectile falling vertically downward).
+
+<P>
+Integrating Equation&nbsp;(<A HREF="#e5.23u">176</A>), we obtain
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\int_{v_{x\,0}}^v\frac{dv_x}{v_x} = - \frac{g}{v_t}\,t,
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="143" HEIGHT="53" BORDER="0"
+ SRC="img582.png"
+ ALT="\begin{displaymath}
+\int_{v_{x\,0}}^v\frac{dv_x}{v_x} = - \frac{g}{v_t}\,t,
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(178)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where <!-- MATH
+ $v_{x\,0} = v_0\,\cos\theta$
+ -->
+<IMG
+ WIDTH="120" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img583.png"
+ ALT="$v_{x\,0} = v_0\,\cos\theta$"> is the <IMG
+ WIDTH="15" HEIGHT="18" ALIGN="BOTTOM" BORDER="0"
+ SRC="img204.png"
+ ALT="$x$">-component of the
+launch velocity. 
+Hence,
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\ln\left(\frac{v_x}{v_{x\,0}}\right) = - \frac{g}{v_t}\,t,
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="148" HEIGHT="47" BORDER="0"
+ SRC="img584.png"
+ ALT="\begin{displaymath}
+\ln\left(\frac{v_x}{v_{x\,0}}\right) = - \frac{g}{v_t}\,t,
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(179)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+or
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+v_x = v_0\,\cos\theta\,{\rm e}^{-g\,t/v_t}.
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="e5.27u"></A><IMG
+ WIDTH="170" HEIGHT="31" BORDER="0"
+ SRC="img585.png"
+ ALT="\begin{displaymath}
+v_x = v_0\,\cos\theta\,{\rm e}^{-g\,t/v_t}.
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(180)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+It is clear, from the above equation, that air drag causes the  projectile's horizontal
+velocity, which would otherwise be constant, to <EM>decay</EM> exponentially on a time-scale of order <IMG
+ WIDTH="40" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img586.png"
+ ALT="$v_t/g$">.
+
+<P>
+Integrating Equation&nbsp;(<A HREF="#e5.24u">177</A>), we get
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\int_{v_{z\,0}}^{v_z} \frac{dv_z}{v_t+v_z} = - \frac{g}{v_t}\,t,
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="169" HEIGHT="53" BORDER="0"
+ SRC="img587.png"
+ ALT="\begin{displaymath}
+\int_{v_{z\,0}}^{v_z} \frac{dv_z}{v_t+v_z} = - \frac{g}{v_t}\,t,
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(181)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where <!-- MATH
+ $v_{z\,0}=v_0\,\sin\theta$
+ -->
+<IMG
+ WIDTH="117" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img588.png"
+ ALT="$v_{z\,0}=v_0\,\sin\theta$"> is the <IMG
+ WIDTH="14" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img548.png"
+ ALT="$z$">-component of the launch velocity. Hence,
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\ln\left(\frac{v_t+v_z}{v_t+v_{z\,0}}\right) = - \frac{g}{v_t}\,t,
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="186" HEIGHT="47" BORDER="0"
+ SRC="img589.png"
+ ALT="\begin{displaymath}
+\ln\left(\frac{v_t+v_z}{v_t+v_{z\,0}}\right) = - \frac{g}{v_t}\,t,
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(182)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+or
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+v_z = v_0\,\sin\theta\,{\rm e}^{-g\,t/v_t} - v_t\left(1-e^{-g\,t/v_t}\right).
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="e5.30u"></A><IMG
+ WIDTH="320" HEIGHT="38" BORDER="0"
+ SRC="img590.png"
+ ALT="\begin{displaymath}
+v_z = v_0\,\sin\theta\,{\rm e}^{-g\,t/v_t} - v_t\left(1-e^{-g\,t/v_t}\right).
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(183)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+It thus follows, from Equations&nbsp;(<A HREF="#e5.27u">180</A>) and (<A HREF="#e5.30u">183</A>), that if the
+projectile stays in the air much longer than a time of order <IMG
+ WIDTH="40" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img586.png"
+ ALT="$v_t/g$"> then
+it ends up falling vertically downward at the terminal velocity, <IMG
+ WIDTH="21" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img268.png"
+ ALT="$v_t$">, irrespective
+of its initial launch angle.
+
+<P>
+Integration of (<A HREF="#e5.27u">180</A>) yields
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+x = \frac{v_0\,v_t\,\cos\theta}{g}\left(1-{\rm e}^{-g\,t/v_t}\right).
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="240" HEIGHT="50" BORDER="0"
+ SRC="img591.png"
+ ALT="\begin{displaymath}
+x = \frac{v_0\,v_t\,\cos\theta}{g}\left(1-{\rm e}^{-g\,t/v_t}\right).
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(184)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+In the limit <IMG
+ WIDTH="78" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img260.png"
+ ALT="$t\ll v_t/g$">, the above equation reduces to
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+x = v_0\,\cos\theta\,t,
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="e5.32u"></A><IMG
+ WIDTH="114" HEIGHT="31" BORDER="0"
+ SRC="img592.png"
+ ALT="\begin{displaymath}
+x = v_0\,\cos\theta\,t,
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(185)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+which is the standard result in the absence of air drag.
+In the opposite limit, <IMG
+ WIDTH="78" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img264.png"
+ ALT="$t\gg v_t/g$">, we get
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+x = \frac{v_0\,v_t\,\cos\theta}{g}.
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="e5.33u"></A><IMG
+ WIDTH="126" HEIGHT="50" BORDER="0"
+ SRC="img593.png"
+ ALT="\begin{displaymath}
+x = \frac{v_0\,v_t\,\cos\theta}{g}.
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(186)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+The above expression clearly sets an effective upper limit on how far the
+projectile can travel in the horizontal direction.
+
+<P>
+Integration of (<A HREF="#e5.30u">183</A>) gives
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+z = \frac{v_t}{g}\,\left(v_0\,\sin\theta + v_t\right)\left(1-{\rm e}^{-g\,t/v_t}\right) - v_t\,t.
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="339" HEIGHT="45" BORDER="0"
+ SRC="img594.png"
+ ALT="\begin{displaymath}
+z = \frac{v_t}{g}\,\left(v_0\,\sin\theta + v_t\right)\left(1-{\rm e}^{-g\,t/v_t}\right) - v_t\,t.
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(187)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+In the limit <IMG
+ WIDTH="78" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img260.png"
+ ALT="$t\ll v_t/g$">, this equation reduces to
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+z = v_0\,\sin\theta\,t - \frac{g}{2}\,t^2,
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="167" HEIGHT="41" BORDER="0"
+ SRC="img595.png"
+ ALT="\begin{displaymath}
+z = v_0\,\sin\theta\,t - \frac{g}{2}\,t^2,
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(188)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+which is the standard result in the absence of air drag. In the opposite
+limit, <IMG
+ WIDTH="78" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img264.png"
+ ALT="$t\gg v_t/g$">, we get
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+z =  \frac{v_t}{g}\,\left(v_0\,\sin\theta + v_t\right) - v_t\,t.
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="229" HEIGHT="45" BORDER="0"
+ SRC="img596.png"
+ ALT="\begin{displaymath}
+z = \frac{v_t}{g}\,\left(v_0\,\sin\theta + v_t\right) - v_t\,t.
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(189)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+Incidentally,   the above analysis implies that air resistance
+only starts to have an appreciable effect on the trajectory after
+the projectile has been in the air a time of order <IMG
+ WIDTH="40" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img586.png"
+ ALT="$v_t/g$">.
+
+<P>
+It is clear, from the previous two equations, that the time
+of flight of the projectile (<EM>i.e.</EM>, the time at which <IMG
+ WIDTH="48" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img597.png"
+ ALT="$z=0$">, excluding the
+trivial result <IMG
+ WIDTH="47" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img72.png"
+ ALT="$t=0$">) is
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+t_f = \frac{2\,v_0\,\sin\theta}{g}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="116" HEIGHT="50" BORDER="0"
+ SRC="img598.png"
+ ALT="\begin{displaymath}
+t_f = \frac{2\,v_0\,\sin\theta}{g}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(190)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+when <IMG
+ WIDTH="78" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img260.png"
+ ALT="$t\ll v_t/g$">, which implies that <!-- MATH
+ $v_0\,\sin\theta \ll v_t$
+ -->
+<IMG
+ WIDTH="111" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img599.png"
+ ALT="$v_0\,\sin\theta \ll v_t$">,
+and
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+t_f = \frac{v_0\,\sin\theta}{g}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="103" HEIGHT="50" BORDER="0"
+ SRC="img600.png"
+ ALT="\begin{displaymath}
+t_f = \frac{v_0\,\sin\theta}{g}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(191)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+when  <IMG
+ WIDTH="78" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img264.png"
+ ALT="$t\gg v_t/g$">, which implies that <!-- MATH
+ $v_0\,\sin\theta \gg v_t$
+ -->
+<IMG
+ WIDTH="111" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img601.png"
+ ALT="$v_0\,\sin\theta \gg v_t$"> (<EM>i.e.</EM>, the vertical component of the
+launch velocity is much greater than the terminal velocity).
+It thus follows, from Equations&nbsp;(<A HREF="#e5.32u">185</A>) and (<A HREF="#e5.33u">186</A>), that
+the horizontal range [<EM>i.e.</EM>, <IMG
+ WIDTH="44" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img602.png"
+ ALT="$x(t_f)$">] of the projectile
+is 
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+R = \frac{v_0^{\,2}\,\sin(2\,\theta)}{g}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="e5.39u"></A><IMG
+ WIDTH="127" HEIGHT="52" BORDER="0"
+ SRC="img603.png"
+ ALT="\begin{displaymath}
+R = \frac{v_0^{\,2}\,\sin(2\,\theta)}{g}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(192)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+when <!-- MATH
+ $v_0\,\sin\theta \ll v_t$
+ -->
+<IMG
+ WIDTH="111" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img599.png"
+ ALT="$v_0\,\sin\theta \ll v_t$">, and
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+R= \frac{v_0\,v_t\,\cos\theta}{g}
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="e5.40u"></A><IMG
+ WIDTH="121" HEIGHT="50" BORDER="0"
+ SRC="img604.png"
+ ALT="\begin{displaymath}
+R= \frac{v_0\,v_t\,\cos\theta}{g}
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(193)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+when <!-- MATH
+ $v_0\,\sin\theta \gg v_t$
+ -->
+<IMG
+ WIDTH="111" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img601.png"
+ ALT="$v_0\,\sin\theta \gg v_t$">.
+Equation&nbsp;(<A HREF="#e5.39u">192</A>) is, of course, the standard result without
+air resistance. This result implies that, in the absence of air resistance, the maximum horizontal range, <IMG
+ WIDTH="43" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img605.png"
+ ALT="$v_0^{\,2}/g$">,
+is achieved when the launch angle <IMG
+ WIDTH="15" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img66.png"
+ ALT="$\theta $"> takes the value <IMG
+ WIDTH="31" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img606.png"
+ ALT="$45^\circ$">.
+On the other hand, Equation&nbsp;(<A HREF="#e5.40u">193</A>) implies that, in the presence of
+air resistance, the maximum horizontal
+range, <IMG
+ WIDTH="60" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img607.png"
+ ALT="$v_0\,v_t/g$">, is achieved when <IMG
+ WIDTH="15" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img66.png"
+ ALT="$\theta $"> is made as small
+as possible. However, <IMG
+ WIDTH="15" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img66.png"
+ ALT="$\theta $"> cannot be made too small, since
+expression (<A HREF="#e5.40u">193</A>) is only valid when <!-- MATH
+ $v_0\,\sin\theta \gg v_t$
+ -->
+<IMG
+ WIDTH="111" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img601.png"
+ ALT="$v_0\,\sin\theta \gg v_t$">.
+In fact, assuming  that <IMG
+ WIDTH="68" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img608.png"
+ ALT="$v_0\gg v_t$">,  the maximum horizontal
+range, <IMG
+ WIDTH="60" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img607.png"
+ ALT="$v_0\,v_t/g$">, is achieved when <!-- MATH
+ $\theta\sim v_t/v_0\ll 1$
+ -->
+<IMG
+ WIDTH="118" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img609.png"
+ ALT="$\theta\sim v_t/v_0\ll 1$">. We thus
+conclude that if air resistance is significant then it causes the horizontal range of the
+projectile to scale <EM>linearly</EM>, rather than quadratically, with the
+launch velocity, <IMG
+ WIDTH="22" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img484.png"
+ ALT="$v_0 $">. Moreover, the maximum horizontal  range is achieved
+with a launch angle which is <EM>much shallower</EM> than the standard
+result, <IMG
+ WIDTH="31" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img606.png"
+ ALT="$45^\circ$">. 
+
+<P>
+
+<DIV ALIGN="CENTER"><A NAME="fdrag"></A><A NAME="4100"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 11:</STRONG>
+<EM>Projectile trajectories in the presence of air resistance.</EM></CAPTION>
+<TR><TD><IMG
+ WIDTH="357" HEIGHT="322" BORDER="0"
+ SRC="img610.png"
+ ALT="\begin{figure}
+\epsfysize =3in
+\centerline{\epsffile{Chapter04/fig4.02.eps}}
+\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+
+<P>
+Figure&nbsp;<A HREF="#fdrag">11</A> shows some example trajectories calculated, from the above model, with the same launch
+angle, <IMG
+ WIDTH="31" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img606.png"
+ ALT="$45^\circ$">, but with different values of the ratio <IMG
+ WIDTH="47" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img611.png"
+ ALT="$v_0/v_t$">. Here,
+<!-- MATH
+ $X=x/(v_0^{\,2}/g)$
+ -->
+<IMG
+ WIDTH="116" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img612.png"
+ ALT="$X=x/(v_0^{\,2}/g)$"> and <!-- MATH
+ $Z=z/(v_0^{\,2}/g)$
+ -->
+<IMG
+ WIDTH="115" HEIGHT="40" ALIGN="MIDDLE" BORDER="0"
+ SRC="img613.png"
+ ALT="$Z=z/(v_0^{\,2}/g)$">. The solid, short-dashed,
+long-dashed, and dot-dashed curves correspond to <IMG
+ WIDTH="82" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img614.png"
+ ALT="$v_0/v_t = 0$">, <IMG
+ WIDTH="14" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img615.png"
+ ALT="$1$">, <IMG
+ WIDTH="14" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img616.png"
+ ALT="$2$">,
+and <IMG
+ WIDTH="14" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img617.png"
+ ALT="$4$">, respectively. It can be seen that as the air resistance strength
+increases  (<EM>i.e.</EM>, as <IMG
+ WIDTH="47" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img611.png"
+ ALT="$v_0/v_t$"> increases), the range of the
+projectile decreases.  Furthermore, there is always an initial time interval
+during which the trajectory is identical to that calculated in the absence
+of air resistance (<EM>i.e.</EM>, <IMG
+ WIDTH="82" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img614.png"
+ ALT="$v_0/v_t = 0$">). Finally, in the presence of
+air resistance, the projectile tends to fall more steeply than it rises.
+Indeed, in the presence of strong air resistance (<EM>i.e.</EM>, <IMG
+ WIDTH="82" HEIGHT="39" ALIGN="MIDDLE" BORDER="0"
+ SRC="img618.png"
+ ALT="$v_0/v_t=4$">), the projectile falls almost
+vertically.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html615"
+  HREF="node30.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next" SRC="next.png"></A> 
+<A NAME="tex2html613"
+  HREF="node26.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up" SRC="up.png"></A> 
+<A NAME="tex2html607"
+  HREF="node28.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous" SRC="prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html616"
+  HREF="node30.html">Charged Particle Motion in</A>
+<B> Up:</B> <A NAME="tex2html614"
+  HREF="node26.html">Multi-Dimensional Motion</A>
+<B> Previous:</B> <A NAME="tex2html608"
+  HREF="node28.html">Motion in a Two-Dimensional</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+Richard Fitzpatrick
+2011-03-31
+</ADDRESS>
+</BODY>
+</HTML>

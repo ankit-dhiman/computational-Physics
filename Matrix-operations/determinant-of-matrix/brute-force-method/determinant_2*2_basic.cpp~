@@ -1,0 +1,75 @@
+
+#include<iostream>
+#include<iomanip>
+#include<math.h>
+#include<time.h>
+
+
+using namespace std ;
+
+int main()
+{
+  /* initialize random seed: */
+  srand (time(NULL));
+
+
+//-------------------------------------------------
+// INTIALIZE MATRICES A AND B TO zero
+//-------------------------------------------------
+
+float rows =  2 ;
+float colms = 2 ;
+
+float matrix_A[3][3]={};
+float matrix_B[3][3]={};
+float matrix_sum[3][3]={};
+float matrix_prod[3][3]={};
+float determinant_A = 0;
+
+
+//-------------------------------------------------
+// ENTERING ELEME NTS IN  MATRICES A AND B TO SOME RANDOM VALUES
+//-------------------------------------------------
+
+for (int i =0;i<rows;i++)
+{
+  for(int j=0;j<colms;j++)
+  {
+    matrix_A[i][j] = rand()%10+1 ;
+  }
+ }
+
+//-------------------------------------------------
+
+
+ determinant_A = matrix_A[0][0]*matrix_A[1][1]-matrix_A[0][1]*matrix_A[1][0];
+
+
+//-------------------------------------------------
+//OUTPUT OF A , B  AND C
+//-------------------------------------------------
+
+
+cout << "\n A  =  \t " ;
+
+for (int i = 0;i<rows;i++)
+{
+ for(int j=0;j<colms;j++)
+ {
+  cout << "\t"<< setw(3) << matrix_A[i][j];
+ }
+ cout << endl << "\t";
+}
+
+//-------------------------------------------------
+
+cout << "\n det ( A ) =  \t " << determinant_A << endl;
+
+
+//-------------------------------------------------
+
+
+
+return 0 ;
+
+}

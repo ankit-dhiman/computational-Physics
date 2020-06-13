@@ -1,0 +1,113 @@
+
+#include<bits/stdc++.h>
+
+using namespace std ;
+#define SIZE 3
+
+int CreateMatrix(float arr[][SIZE] , int m , int n ) ;
+void PrintMatrix(float Arr[][SIZE], int m ,int n) ;
+
+
+
+
+int main()
+{
+  /* initialize random seed: */
+  srand (time(NULL));
+
+
+
+//----------------- INTIALIZE MATRICES A AND B TO zero-----------------
+
+
+int m =3  ,n = 3 ;
+
+float matrix_A[3][3]={};
+float matrix_B[3][3]={};
+float matrix_sum[3][3]={};
+float matrix_prod[3][3]={};
+float sum = 0;
+
+
+//--------- ENTERING ELEMENTS v--------------
+
+
+CreateMatrix(matrix_A ,3,3) ;
+CreateMatrix(matrix_B ,3,3) ;
+
+//----------------------  COMPUTING SUM  OF MATRICES A AND B----------------------
+
+
+
+
+for (int i = 0;i<3;i++)
+{
+ for(int j=0;j<3;j++)
+ {
+   matrix_sum[i][j] = matrix_A[i][j] + matrix_B[i][j];
+ }
+}
+
+
+//------------------ COMPUTING PRODUCT  OF MATRICES A AND B-------------
+
+
+
+for (int i = 0;i<3;i++)
+{
+ for(int j=0;j<3;j++)
+ {
+  for (int k = 0; k<3;k++)
+  {
+    matrix_prod[i][j] = matrix_prod[i][j] + matrix_A[i][k]* matrix_B[k][j] ;
+
+  }
+ }
+}
+
+
+
+//---------------------OUTPUT OF A , B  AND C---------------------
+
+PrintMatrix(matrix_A,m,n) ;
+PrintMatrix(matrix_B,m,n) ;
+PrintMatrix(matrix_sum,m,n) ;
+PrintMatrix(matrix_prod,m,n) ;
+
+
+return 0 ;
+
+}
+
+
+
+//-------------------------------------------------
+
+int CreateMatrix(float arr[][SIZE] , int m , int n ){
+int num = 5;
+for (int i=0;i<m;i++){
+for (int j = 0;j<n;j++)
+{ arr[i][j] = rand()%num ;
+}
+}
+return 0;
+}
+
+//-------------------------------------------------
+
+void PrintMatrix(float arr[][SIZE], int m ,int n) 
+{ cout << "\n\n  matrix  = \n  " ;
+  for (int i = 0;i<m;i++){
+  for(int j=0;j<n;j++) {
+  cout  <<setw(12)<< arr[i][j] 				;
+ }
+ cout << "\n  "  <<setw(12)      			;
+}
+    return						; 
+}
+
+
+
+
+
+

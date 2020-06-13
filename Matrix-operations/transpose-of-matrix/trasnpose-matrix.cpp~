@@ -1,0 +1,90 @@
+
+#include<iostream>
+#include<iomanip>
+#include<cmath>
+#include<time.h>
+
+
+using namespace std ;
+
+int main()
+{
+  /* initialize random seed: */
+  srand (time(NULL));
+
+int n ;
+
+cout << "\n ****Enter the size of the matrix A**** \n:" ;
+cin >> n ;
+cout << endl <<endl ;
+//-------------------------------------------------
+// INTIALIZE MATRICES A AND TRANSPOSE TO zero
+//-------------------------------------------------
+
+
+
+float matrix_A[10][10]={};
+float matrix_transpose[10][10]={};
+float sum = 0;
+
+
+//-------------------------------------------------
+// INTIALIZING  MATRICES A TO SOME RANDOM VALUES
+//-------------------------------------------------
+
+for (int i = 1;i<=n;i++)
+{
+  for(int j=1;j<=n;j++)
+  {
+    matrix_A[i-1][j-1] = rand()%10 ;
+  }
+ }
+
+//-------------------------------------------------
+//  COMPUTING TRANSPOSE  OF MATRICES A
+//-------------------------------------------------
+
+
+
+for (int i = 1;i<=n;i++)
+{
+  for(int j=1;j<=n;j++)
+ {
+   matrix_transpose[j-1][i-1] = matrix_A[i-1][j-1];
+ }
+}
+
+//-------------------------------------------------
+//OUTPUT OF A , A^t
+//-------------------------------------------------
+
+
+cout << "\n A  =  \t " << endl;
+
+for (int i = 1;i<=n;i++)
+{
+  for(int j=1;j<=n;j++)
+ {
+  cout << "\t"<< setw(3) << matrix_A[i-1][j-1];
+ }
+ cout << "		   \t\n ";
+}
+
+//-------------------------------------------------
+
+cout << "\n transpose(A) =  \t \n" ;
+
+for (int i = 1;i<=n;i++)
+{
+  for(int j=1;j<=n;j++)
+ {
+  cout << "\t"<< setw(3) << matrix_transpose[i-1][j-1];
+ }
+ cout << "\n 		  \t\n ";
+
+}
+
+
+return 0 ;
+
+}
